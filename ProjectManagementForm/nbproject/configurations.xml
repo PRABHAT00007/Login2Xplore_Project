@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor xmlns="http://www.netbeans.org/ns/html5project/2">
+    <projectFiles>
+        <projectFile id="projectFile.0">
+            <name>index.html</name>
+        </projectFile>
+    </projectFiles>
+    <runConfigurations>
+        <runConfiguration default="true" name="default">
+            <startFile>public_html/index.html</startFile>
+        </runConfiguration>
+    </runConfigurations>
+</configurationDescriptor>

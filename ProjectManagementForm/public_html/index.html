@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project Management Form | COLLEGE-DB</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-fluid app-container">
+
+    <div class="project-card">
+
+        <div class="header-section">
+            <div class="header-badge">
+                COLLEGE DB • PROJECT TABLE
+            </div>
+
+            <h1>Project Management</h1>
+
+            <p>
+                Create new project records or manage existing ones using
+                the Project ID.
+            </p>
+        </div>
+
+        <form id="projectForm" autocomplete="off">
+
+            <!-- Project ID -->
+            <div class="section">
+                <h4>Project Identifier</h4>
+
+                <div class="form-group">
+                    <label>
+                        Project ID
+                        <span class="field-msg" id="projectIdMsg"></span>
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control modern-input"
+                        id="projectId"
+                        placeholder="Enter Project ID"
+                        onchange="lookupProject()">
+                </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="section">
+                <h4>Project Details</h4>
+
+                <div class="form-group">
+                    <label>Project Name</label>
+
+                    <input
+                        type="text"
+                        class="form-control modern-input"
+                        id="projectName"
+                        placeholder="Enter Project Name"
+                        disabled>
+                </div>
+
+                <div class="form-group">
+                    <label>Assigned To</label>
+
+                    <input
+                        type="text"
+                        class="form-control modern-input"
+                        id="assignedTo"
+                        placeholder="Employee Name"
+                        disabled>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="section">
+                <h4>Timeline</h4>
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Assignment Date</label>
+
+                            <input
+                                type="date"
+                                class="form-control modern-input"
+                                id="assignmentDate"
+                                disabled>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Deadline</label>
+
+                            <input
+                                type="date"
+                                class="form-control modern-input"
+                                id="deadline"
+                                disabled>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="action-panel">
+
+                <button
+                    type="button"
+                    id="btnReset"
+                    class="btn btn-light-action"
+                    onclick="resetForm()"
+                    disabled>
+                    Reset
+                </button>
+
+                <button
+                    type="button"
+                    id="btnUpdate"
+                    class="btn btn-primary-action"
+                    onclick="updateProject()"
+                    disabled>
+                    Update
+                </button>
+
+                <button
+                    type="button"
+                    id="btnSave"
+                    class="btn btn-success-action"
+                    onclick="saveProject()"
+                    disabled>
+                    Save Project
+                </button>
+
+            </div>
+
+        </form>
+
+        <div id="statusBar" class="status-wrapper"></div>
+
+    </div>
+
+</div>
+</body>
+</html>
